@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateUsersTable extends Migration
+class CreateQuestionsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -15,18 +15,12 @@ class CreateUsersTable extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->string('user_name');
-            $table->string('login_id');
-            $table->string('user_type');
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
-            $table->integer('phone')->nullable();
-            $table->integer('level_id');
-            $table->integer('class_id');
-            $table->date('join_date')->nullable();
+            $table->integer('user_id');
+            $table->integer('exam_id');
+            $table->integer('total_scores');
+            $table->integer('full_scores');
+            $table->string('grade');
             $table->integer('created_id');
-            $table->rememberToken();
             $table->timestamps();
         });
     }
