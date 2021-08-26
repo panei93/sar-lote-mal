@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateQudstionChoisesTable extends Migration
+class CreatePermissionsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,12 @@ class CreateQudstionChoisesTable extends Migration
      */
     public function up()
     {
-        Schema::create('question_choices', function (Blueprint $table) {
+        Schema::create('permissions', function (Blueprint $table) {
             $table->id();
-            $table->integer('question_id');
-            $table->longText('answer_arr');
+            $table->string('page_name');
+            $table->string('user_type');
+            $table->string('read_permit');
+            $table->string('edit_permit');
             $table->integer('created_id');
             $table->timestamps();
         });
@@ -29,6 +31,6 @@ class CreateQudstionChoisesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('question_choices');
+        Schema::dropIfExists('permissions');
     }
 }
