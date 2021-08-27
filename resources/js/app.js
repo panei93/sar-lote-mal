@@ -21,6 +21,7 @@ import { routes } from './routes';
 
 Vue.use(VueRouter);
 Vue.use(VueAxios, axios);
+Vue.component('all-exams', require('./components/AllExams.vue'));
  
 const router = new VueRouter({
     mode: 'history',
