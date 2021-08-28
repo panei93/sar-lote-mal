@@ -12,6 +12,8 @@ import VueAxios from 'vue-axios';
 import VueRouter from 'vue-router';
 import axios from 'axios';
 import { routes } from './routes';
+import Vue from 'vue';
+
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

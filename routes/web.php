@@ -13,10 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('exam');
-});
+// Route::get('/', function () {
+//     return view('exam');
+// });
 
-// Route::get('{any}', function () {
-//     return view('layouts.app');
-// })->where('any', '.*');
+Route::get('{any}', function () {
+    return view('layouts.app');
+})->where('any', '.*');

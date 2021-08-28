@@ -6,7 +6,7 @@
     <meta name="csrf-token" value="{{ csrf_token() }}"/>
     <title>Laravel 8 Vue JS CRUD Example  - Tutsmake</title>
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
-    <link href="{{ mix('css/app.css') }}" type="text/css" rel="stylesheet"/>
+    <link href="{{  url('/').mix('css/app.css') }}" type="text/css" rel="stylesheet"/>
     <style>
         .bg-light {
             background-color: #eae9e9 !important;
@@ -17,6 +17,6 @@
 <div id="app">
     @yield('content')
 </div>
-    <script src="{{ mix('js/app.js') }}" type="text/javascript"></script>
+    <script src="{{ url('/').mix('js/app.js') }}" type="text/javascript"></script>
 </body>
 </html>
